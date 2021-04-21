@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
-                      'https://images.pexels.com/photos/905164/pexels-photo-905164.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'),
+                      'https://images.pexels.com/photos/905164/pexels-photo-905164.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
                   fit: BoxFit.cover)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Register(),
+                              builder: (context) => SecondRoute(),
                             ));
                       },
                       child: Text('Register')),
@@ -94,16 +94,22 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class Register extends StatelessWidget {
-  const Register({Key key}) : super(key: key);
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Register'),
+        title: Text('Book page'),
       ),
-      body: Container(),
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage(
+                    'https://i.pinimg.com/564x/1b/56/12/1b56125915ccee3185fd89a76d29713e.jpg'),
+                fit: BoxFit.cover)),
+      ),
     );
   }
 }
